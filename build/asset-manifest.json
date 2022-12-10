@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9235e196.chunk.css",
+    "main.js": "/static/js/main.064a9cca.chunk.js",
+    "main.js.map": "/static/js/main.064a9cca.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.87796a88.js",
+    "runtime-main.js.map": "/static/js/runtime-main.87796a88.js.map",
+    "static/js/2.cc2a6069.chunk.js": "/static/js/2.cc2a6069.chunk.js",
+    "static/js/2.cc2a6069.chunk.js.map": "/static/js/2.cc2a6069.chunk.js.map",
+    "static/js/3.2adee51e.chunk.js": "/static/js/3.2adee51e.chunk.js",
+    "static/js/3.2adee51e.chunk.js.map": "/static/js/3.2adee51e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9235e196.chunk.css.map": "/static/css/main.9235e196.chunk.css.map",
+    "static/js/2.cc2a6069.chunk.js.LICENSE.txt": "/static/js/2.cc2a6069.chunk.js.LICENSE.txt",
+    "static/media/992BG.d0045e20.png": "/static/media/992BG.d0045e20.png",
+    "static/media/VnFlag.435e02b9.png": "/static/media/VnFlag.435e02b9.png",
+    "static/media/englishFlag.c40d9b7a.png": "/static/media/englishFlag.c40d9b7a.png",
+    "static/media/human.64402415.svg": "/static/media/human.64402415.svg",
+    "static/media/imgHomePage4.f4fe38db.jpg": "/static/media/imgHomePage4.f4fe38db.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87796a88.js",
+    "static/js/2.cc2a6069.chunk.js",
+    "static/css/main.9235e196.chunk.css",
+    "static/js/main.064a9cca.chunk.js"
+  ]
+}
