@@ -1,0 +1,283 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #2b3647;
+}
+.mobie_container {
+  /* border-bottom-width: 80px; */
+  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1); */
+  /* height: 520px; */
+  /* width: 320px; */
+  width: 100%;
+  background-color: #2b3647;
+}
+/* .content {
+  background-color: aliceblue;
+  display: block;
+  height: 100%;
+  width: 100%;
+} */
+.nav_menu_collapse {
+  /* background: #fff; */
+  /* border-bottom: 1px solid #ddd; */
+  height: 60px;
+  /* position: relative; */
+}
+.nav_links {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  list-style: none;
+  transition: 0.3s;
+  transform: translateY(-100%);
+  opacity: 0;
+  height: calc(100vh - 65px);
+  /* background: rgba(0, 0, 0, 0.9); */
+  background: rgba(43, 54, 71, 0.9);
+  padding: 40px 0;
+}
+.dayRemainding_container {
+  position: fixed;
+  color: rgb(255, 210, 45) !important;
+  height: max-content !important;
+  /* height: 60px; */
+  bottom: 0;
+  left: 0;
+  border: none !important;
+}
+.dayExpireVn {
+  color: white;
+}
+.nav_links::before {
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: none;
+  height: calc(100vh - 65px);
+  right: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  transition: all 0.3s;
+  visibility: hidden;
+  position: absolute;
+  /* background: red; */
+}
+.mobie_container .link {
+  border-bottom: 1px solid #ddd;
+  color: white;
+  /* opacity: 0; */
+  visibility: hidden;
+  cursor: pointer;
+  /* transition: translateY(-30px) 0.3s; */
+}
+.nav_links .link {
+  /* background: #fff; */
+  /* color: #404040; */
+  color: white;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  height: 45px;
+  text-align: left;
+  width: 100%;
+  transition: translateY(-20px) 0.3s;
+  text-decoration: none;
+}
+.nav_links .link:hover {
+  color: rgb(255, 210, 45);
+  background: rgba(43, 54, 71, 1);
+  transition: background 0.4s;
+}
+.toggle_btn[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.toggle_btn:checked + .toggle_btn_label {
+  border: 4px solid silver;
+  border-radius: 50%;
+  height: 28px;
+  top: 16px;
+  right: 18px;
+  width: 28px;
+  transform: rotate(-135deg);
+}
+.toggle_btn:checked + .toggle_btn_label::before {
+  background: silver;
+  top: 8px;
+  right: 4px;
+  width: 12px;
+}
+.toggle_btn:checked + .toggle_btn_label::after {
+  background: silver;
+  opacity: 1;
+  top: 8px;
+  right: 4px;
+  visibility: visible;
+  width: 12px;
+}
+
+.toggle_btn:checked + .toggle_btn_label:hover {
+  border-color: rgb(255, 255, 255);
+}
+.toggle_btn:checked + .toggle_btn_label:hover::before,
+.toggle_btn:checked + .toggle_btn_label:hover::after {
+  background: rgb(255, 210, 45);
+}
+.toggle_btn[type="checkbox"]:checked ~ .nav_links {
+  transform: translateY(60px);
+  opacity: 1;
+  z-index: 10;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+  /* position: fixed; */
+  /* top: 60px; */
+  /* top: 0;
+
+  left: 0; */
+}
+.toggle_btn[type="checkbox"]:checked ~ .nav_links::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  display: block;
+}
+
+.toggle_btn[type="checkbox"]:checked ~ .nav_links .link {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.toggle_btn::before {
+  background: silver;
+  top: 8px;
+  right: 4px;
+  width: 12px;
+}
+.toggle_btn::after {
+  background: silver;
+  opacity: 1;
+  top: 8px;
+  right: 4px;
+  visibility: visible;
+  width: 12px;
+}
+.toggle_btn:hover {
+  border-color: rgb(255, 210, 45);
+}
+.toggle_btn:hover::before,
+.toggle_btn:hover::after {
+  background: rgb(255, 210, 45);
+}
+.mobie_container .toggle_btn_label {
+  background: none transparent;
+  border: 4px solid rgb(255, 210, 45);
+  border-right: 0 solid transparent;
+  border-left: 0 solid transparent;
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 24px;
+  transition: all 0.2s;
+}
+.mobie_container .toggle_btn_label::before {
+  background: rgb(255, 210, 45);
+  content: "";
+  height: 4px;
+  right: 0;
+  position: absolute;
+  top: 6px;
+  width: 24px;
+  transition: all 0.2s;
+}
+.mobie_container .toggle_btn_label::after {
+  background: coral;
+  content: "";
+  height: 4px;
+  right: 0;
+  position: absolute;
+  top: 6px;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  transform: rotate(90deg);
+  transition: all 0.2s;
+}
+.link:active .nav_links::before {
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: none;
+  visibility: hidden;
+  position: absolute;
+}
+.btn_menu_activity {
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  font-size: 18px;
+  color: #31acff;
+}
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_activity_container {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.menu_activity_container .menu_toggle {
+  border: none;
+  color: white;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  height: 45px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.menu_activity_container .menu_toggle {
+  border: none;
+}
+.menu_activity {
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: height 0.4s;
+}
+.menu_activity .link {
+  padding-left: 40px;
+  border: none;
+  color: rgb(255, 210, 45);
+}
+.toggle_btn[type="checkbox"]:not(:checked) + .toggle_btn_label + .nav_links .acitve_menu_acitity .menu_activity {
+  height: 180px;
+  opacity: 1;
+  visibility: visible;
+}
+.acitve_menu_acitity .menu_activity {
+  height: 180px;
+  opacity: 1;
+  visibility: visible;
+}
+.acitve_menu_acitity .btn_menu_activity {
+  transform: rotate(-90deg);
+}
+/* .toggle_btn[type="checkbox"]:checked + .toggle_btn_label + .nav_links .acitve_menu_acitity .menu_activity {
+  height: 0;
+  opacity: 0;
+}
+.toggle_btn[type="checkbox"]:checked + .acitve_menu_acitity + .nav_links .btn_menu_activity {
+  transform: rotate(-90deg);
+} */

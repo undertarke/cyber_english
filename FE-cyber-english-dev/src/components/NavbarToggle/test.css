@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  background: #404040;
+}
+a {
+  text-decoration: none;
+}
+.mobie-wrapper {
+}
+.mobie-container {
+  background: #fff;
+  border: 20px solid #666;
+  border-bottom-width: 80px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  height: 520px;
+  margin: 0 30px;
+  position: relative;
+  width: 320px;
+}
+.mobie-container::before {
+  background: #555;
+  border: 2px solid #4a4a4a;
+  display: block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-50%);
+  bottom: -67px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.content {
+  background-color: aliceblue;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+nav {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+  position: relative;
+}
+.nav-links {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+.nav-links::before {
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  transition: all 0.3s;
+  visibility: hidden;
+  position: absolute;
+}
+li {
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transform: all 0.3s;
+}
+a {
+  background: #fff;
+  color: #404040;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 20px;
+  text-align: left;
+  width: 100%;
+  transition: all 0.3s;
+}
+a:hover {
+  color: coral;
+}
+input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.hamberger1:checked + label {
+  border: 4px solid silver;
+  border-radius: 50%;
+  height: 28px;
+  top: 16px;
+  left: 18px;
+  width: 28px;
+  transform: rotate(-135deg);
+}
+.hamberger1:checked + label::before {
+  background: silver;
+  top: 8px;
+  left: 4px;
+  width: 12px;
+}
+.hamberger1:checked + label::after {
+  background: silver;
+  opacity: 1;
+  top: 8px;
+  left: 4px;
+  visibility: visible;
+  width: 12px;
+}
+
+.hamberger1:checked + label:hover {
+  border-color: coral;
+}
+.hamberger1:checked + label:hover::before,
+.hamberger1:checked + label:hover::after {
+  background: coral;
+}
+.hamberger1:checked ~ .nav-links::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamberger1:checked ~ .nav-links li {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.hamberger1::before {
+  background: silver;
+  top: 8px;
+  left: 4px;
+  width: 12px;
+}
+.hamberger1::after {
+  background: silver;
+  opacity: 1;
+  top: 8px;
+  left: 4px;
+  visibility: visible;
+  width: 12px;
+}
+.hamberger1:hover {
+  border-color: coral;
+}
+.hamberger1:hover::before,
+.hamberger1:hover::after {
+  background: coral;
+}
+label {
+  background: none transparent;
+  border: 4px solid coral;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  cursor: pointer;
+  display: block;
+  height: 24px;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  width: 24px;
+  transition: all 0.2s;
+}
+label::before {
+  background: coral;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 24px;
+  transition: all 0.2s;
+}
+label::after {
+  background: coral;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  transform: rotate(90deg);
+  transition: all 0.2s;
+}

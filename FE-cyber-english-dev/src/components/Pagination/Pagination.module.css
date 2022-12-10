@@ -1,0 +1,21 @@
+.pagination_row {
+  display: flex;
+}
+.page_item {
+  border: 1px solid black;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 36px;
+  margin: 5px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* .page_item:hover, */
+.active {
+  background-color: #3682f9;
+  color: #ffffff;
+  border-color: #3682f9;
+}

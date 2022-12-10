@@ -1,0 +1,255 @@
+/* start small screen */
+.container {
+  height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.option {
+  color: #4b4b4b;
+}
+.option p {
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link_style {
+  color: #fbb300 !important;
+  font-size: 35px;
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+}
+
+.desc {
+  margin-top: 30px;
+  color: #3d405b;
+  font-size: 22px !important;
+}
+.descTranslate {
+  font-style: italic;
+}
+.detail_container {
+  position: relative;
+  z-index: 0;
+  width: 768px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detail_container::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #2b3647;
+}
+
+.detail_container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background-color: #f4f1de;
+
+  border-radius: 5px;
+}
+/* end SmallScreen */
+
+/* BigScreen */
+
+.BigScreen {
+  box-sizing: border-box;
+  /* background: #03124b; */
+  margin: 0;
+  height: calc(100vh - 65px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.BigScreen:first-child {
+  transform: translateY(10%) !important;
+}
+
+.course__item__container {
+  /* width: 20%; */
+  width: 250px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  position: relative;
+  cursor: pointer;
+}
+
+.course__item__container .title {
+  margin-bottom: 1rem;
+}
+
+/* .course__item__container h4 {
+} */
+
+.course__item__front,
+.course__item__back {
+  color: white;
+  min-height: 250px;
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* background: linear-gradient(209.21deg, rgb(60, 11, 140) 13.57%, rgb(30, 208, 226) 98.38%);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s; */
+  background: linear-gradient(
+    209.21deg,
+    #fbb300 13.57%,
+    rgb(30, 208, 226) 98.38%
+  );
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  /* background-color: #fbb034;
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%); */
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+.course__item__front .inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.course__item__back .inner {
+  display: contents;
+}
+.course__item__container .course__item__front,
+.course__item__container:hover .course__item__back {
+  transform: rotateY(0deg);
+}
+
+.course__item__container:hover .course__item__front {
+  transform: rotateY(180deg);
+}
+
+.course__item__container .course__item__back {
+  transform: rotateY(-180deg);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(60px);
+  width: 80%;
+}
+.backDrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: red; */
+}
+.top,
+.bottom,
+.left,
+.right {
+  position: absolute;
+}
+.backDrop .top {
+  left: 0;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  background: #f8f4e1;
+  /* opacity: 0.6; */
+  border-bottom-right-radius: 200px;
+  z-index: -1;
+}
+.backDrop .bottom {
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background: #dbf6e9;
+  border-top-left-radius: 200px;
+  z-index: -1;
+}
+.backDrop .left {
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 50%;
+  background: #f8f4e1;
+  /* background: #9ddfd3;
+  opacity: 0.6; */
+  z-index: -2;
+}
+.backDrop .right {
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  background: #dbf6e9;
+  z-index: -2;
+}
+/* end BigScreen */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .option p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .link_style {
+    font-size: 22px;
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+  }
+  .desc {
+    margin-top: 30px;
+    color: #3d405b;
+    font-size: 16px !important;
+  }
+  .descTranslate {
+    font-size: 14px !important;
+    font-style: italic;
+  }
+  .detail_container::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .detail_container {
+    overflow: auto !important;
+  }
+  .detail_container::after {
+    height: calc(100% - -100px);
+  }
+}
+@media screen and (max-width: 312px) {
+  .detail_container::after {
+    height: calc(100% - -200px);
+  }
+}
