@@ -1,0 +1,119 @@
+.sidebar__menu {
+  border-radius: 0.4rem;
+  position: relative;
+  font-weight: bold;
+  color: #687f98;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.28, 0.25, 0.36, 1.28);
+  cursor: pointer;
+  z-index: 2;
+  padding-right: 10px;
+}
+
+.sidebar__select {
+  background: #263238;
+  color: white;
+  height: 50px;
+  padding-left: 15px;
+}
+.sidebar__menu__icon-box {
+  width: 10px;
+  height: 10px;
+  margin-top: -0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  background: #263238;
+}
+
+.sidebar__menu__icon {
+  width: 10px;
+  height: 10px;
+  border-right: 0.15rem solid #31acff;
+  border-top: 0.15rem solid #31acff;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(135deg);
+}
+
+.sidebar__menu__dropdown {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  width: 100%;
+  width: 200px;
+  font-weight: lighter;
+  top: 52px;
+  font-size: 18px;
+  opacity: 0;
+  left: 5px;
+  display: none;
+  border-radius: 8px;
+  background-color: white;
+  border-top: 0.2rem solid #eef3f6;
+  z-index: 999;
+  overflow-y: scroll;
+  max-height: 50%;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #c2c9d2;
+}
+
+.sidebar__menu__dropdown-option {
+  padding: 0 0 0 15px;
+  border-radius: 0.4rem;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.sidebar__menu__dropdown-option a {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  color: black;
+  width: 100%;
+}
+.sidebar__menu__dropdown-option:hover a {
+  color: #263238;
+  font-weight: 600;
+  transition: all 0.1s;
+}
+
+.sidebar__menu__dropdown-option:hover {
+  background-color: #e8f0fc;
+}
+
+.sidebar__menu__active {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.sidebar__menu__active .sidebar__menu__icon {
+  transform: rotate(45deg);
+}
+
+.sidebar__menu__active .sidebar__menu__dropdown {
+  opacity: 1;
+  display: block;
+  animation: showDropdownMenu 0.4s cubic-bezier(0.28, 0.25, 0.36, 1.28);
+}
+
+@keyframes showDropdownMenu {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

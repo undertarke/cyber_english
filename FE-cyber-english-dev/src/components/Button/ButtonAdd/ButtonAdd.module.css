@@ -1,0 +1,50 @@
+.btn_add {
+  background: #fec400;
+  /* background: red; */
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.5s;
+  position: relative;
+  /* margin-bottom: 25px; */
+}
+.btn_add::after {
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content;
+  top: -30px;
+  left: 50%;
+  opacity: 0;
+  transition: 0.3s;
+  content: "Add this meaning to word list";
+}
+
+.btn_add:hover {
+  /* transform: scale(1.1); */
+}
+
+.btn_add:hover::after {
+  display: block;
+  opacity: 1;
+}
+.btn_add i {
+  font-size: 10px;
+}
+@media screen and (max-width: 576px) {
+  .btn_add::after {
+    /* content: "haha"; */
+    /* display: none; */
+    content: "";
+  }
+  .btn_add {
+    width: 40px;
+    height: 20px;
+  }
+}

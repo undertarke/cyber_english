@@ -1,0 +1,278 @@
+.body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  /* background: #eaeff4; */
+  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 0 5px #999999;
+}
+
+.col_left,
+.col_right {
+  padding: 60px;
+  display: flex;
+}
+
+.col_left {
+  width: 60%;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  background-color: #263238;
+}
+
+.col_right {
+  padding: 60px 60px;
+  width: 50%;
+  margin-left: -10%;
+}
+.policyPoup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: calc(100vh - 65px); */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.loginPageNote {
+  width: 78%;
+  margin-top: 10px;
+  color: #333;
+  font-size: 80%;
+  font-weight: 400;
+}
+@media (max-width: 575.98px) {
+  .container {
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .col_left,
+  .col_right {
+    width: 100%;
+    margin: 0;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .col_right {
+    padding: 30px;
+  }
+}
+
+.login_text {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.3s;
+  animation: titleMoving linear 1s 0.3s forwards;
+}
+
+.login_text .h2Tag {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.login_text .pTag {
+  margin: 20px 0 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.login_text .btn {
+  display: inline-block;
+  padding: 7px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  background-color: transparent;
+}
+
+.login_text .btn:hover {
+  color: #263238;
+  color: white;
+
+  box-shadow: inset 150px 0 0 0 #ffffff;
+}
+
+.login_form {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  flex-direction: column;
+}
+
+.login_form .h2Tag {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+.login_form .h2Tag:first-child {
+  margin: 0 0 15px 0;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.login_form .h2Tag {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.login_form .pTag {
+  margin: 0 0 10px 0;
+  text-align: left;
+  color: #666666;
+  font-size: 15px;
+}
+
+.login_form .pTag:last-child {
+  margin: 0;
+  padding-top: 3px;
+}
+
+.login_form .pTag a {
+  color: #263238;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login_form .labelTag {
+  display: block;
+  width: 100%;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+.acitve_shotification {
+  color: #ff574e;
+  animation: changeColor 0.5s linear;
+  font-size: bold;
+  /* animation-iteration-count: 2; */
+}
+.login_form .pTag:last-child .labelTag {
+  width: 60%;
+  float: left;
+}
+
+.login_form .labelTag .spanTag {
+  color: #ff574e;
+  padding-left: 2px;
+}
+
+.login_form .inputTag {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+}
+
+.login_form .inputTag:focus {
+  border-color: #ff574e;
+}
+
+.login_form .btnOk,
+.login_form .btnCancel {
+  height: 35px;
+  display: inline-block;
+  width: 30%;
+  margin-right: 15px;
+  margin-top: 5px;
+  color: #263238;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #263238;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 0 #263238;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+.btnOk:hover {
+  background: #2b3647 !important;
+  color: white !important;
+}
+
+.login_form .btnCancel:hover {
+  color: #ffffff;
+  background-color: #263238;
+  border: white;
+}
+
+@keyframes titleMoving {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes changeColor {
+  0% {
+    opacity: 0;
+    color: #666666;
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    right: #ff574e;
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}

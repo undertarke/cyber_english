@@ -1,0 +1,109 @@
+.btn_restart {
+  display: block;
+  background: #fff;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+  color: #3b5998;
+  position: relative;
+
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.2s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+  border: 1px solid #294480;
+  outline: nonec;
+}
+.spanTag,
+.icon {
+  display: block;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+.spanTag {
+  width: 72%;
+  line-height: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  left: 0;
+  transition: all 0.2s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.spanTag:after {
+  content: "";
+  background-color: #294480;
+  width: 2px;
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  right: -1px;
+}
+.icon {
+  width: 28%;
+  right: 0;
+  transition: all 0.2s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.icon .fa {
+  font-size: 30px;
+  vertical-align: middle;
+  transition: height 0.2s ease;
+}
+
+.restart {
+  height: 36px;
+}
+
+.check {
+  display: none;
+}
+.btn_restart.success .spanTag,
+.btn_restart:hover .spanTag {
+  left: -72%;
+  opacity: 0;
+}
+.btn_restart.success,
+.btn_restart:hover .icon {
+  width: 100px;
+}
+.btn_restart.success,
+.btn_restart:hover .restart {
+  font-size: 20px;
+}
+
+.btn_restart.success {
+  background-color: #294480;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_restart.success .icon {
+  width: 100%;
+}
+.btn_restart.success .restart {
+  display: none;
+}
+
+.btn_restart.success .check {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  /* left: -72%; */
+  /* margin: auto; */
+  color: #fff;
+}
+
+.btn_restart:hover {
+  opacity: 0.9;
+}
+.btn_restart.success .restart {
+  /* height: 46px;
+   */
+  display: none;
+}
+
+.btn_restart:active {
+  opacity: 1;
+}

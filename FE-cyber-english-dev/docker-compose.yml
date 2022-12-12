@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  client:
+    stdin_open: true
+    container_name: client
+    restart: always
+    build: .
+    ports:
+      - 3000:80
+    networks:
+      - nw_tnms
+
+networks:
+  nw_tnms:
