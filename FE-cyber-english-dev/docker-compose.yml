@@ -5,9 +5,9 @@ services:
     stdin_open: true
     container_name: client
     restart: always
-    build: .
+    image: xaythixin/images:english.prod.fe.latest
     ports:
-      - 3000:80
+      - 3000:3000
     networks:
       - nw_tnms
 

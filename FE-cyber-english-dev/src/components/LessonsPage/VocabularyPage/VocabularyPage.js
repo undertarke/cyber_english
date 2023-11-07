@@ -14,7 +14,6 @@ export default class VocabularyPage extends Component {
   audio = new Audio();
   getDataAPI = () => {
     httpServ.getVocabularyByUnit(this.props.match.params.id).then((res) => {
-      console.log(res.data)
       this.setState({ data: res.data });
     });
   };

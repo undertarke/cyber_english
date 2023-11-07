@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 const environment = {
-  apiUrl: "https://be.cyber-english.tk/api",
+  apiUrl: "https://beeng.cybersoft.edu.vn/api",
   env: "dev",
   faceBookAppId: "464905814949590",
   production: false,
