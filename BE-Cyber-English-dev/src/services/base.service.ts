@@ -5,7 +5,7 @@ import LoggerService from "../config/logger";
 import { timeStampSeconds } from "../ultils/Ultil";
 
 class BaseService {
-  protected connection: mysql.Pool;
+  protected connection: any;
   protected nameSpace = "";
   private logger: LoggerService = container.resolve(LoggerService);
   constructor() {

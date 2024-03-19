@@ -1,9 +1,9 @@
-FROM node:14.17.4-alpine
+FROM node:16
 
 # vi tri thu muc 
 WORKDIR /app
 
-COPY package.json ./
+COPY package.json .
 
 
 # cau lenh run

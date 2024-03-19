@@ -4,22 +4,22 @@ networks:
   nginx-network:
 
 services:
-  mysql:
-    container_name: mysql_english
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    image: mysql:8.0.26
-    ports:
-     - 3306:3306
-    volumes:
-      - ./mysql_data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 123456788
-      MYSQL_PASSWORD: 123456788
-      MYSQL_DATABASE: cyber_english
-      MYSQL_USER: cyberEnglishProd
-    networks:
-      - nginx-network
+  # mysql:
+  #   container_name: mysql_english
+  #   command: --default-authentication-plugin=mysql_native_password
+  #   restart: always
+  #   image: mysql:8.0.26
+  #   ports:
+  #    - 3306:3306
+  #   volumes:
+  #     - ./mysql_data:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: 123456788
+  #     MYSQL_PASSWORD: 123456788
+  #     MYSQL_DATABASE: cyber_english
+  #     MYSQL_USER: cyberEnglishProd
+  #   networks:
+  #     - nginx-network
 
   # client:
   #   stdin_open: true
@@ -37,22 +37,18 @@ services:
     container_name: api_english
     restart: always
     # image: xaythixin/images:english.prod.be.latest
-    build:
-      context: .
-      dockerfile: ./docker/DockerFile
+    build: .
     volumes: 
       - ./src:/app/src
     ports:
       - 3000:3000
     networks:
       - nginx-network
-    depends_on:
-      - mysql
     environment:
       MYSQL_DATABASE: cyber_english
-      MYSQL_HOST: mysql
+      MYSQL_HOST: 139.59.116.127
       MYSQL_USER: root
-      MYSQL_PASSWORD: 123456788
+      MYSQL_PASSWORD: h8U1q59DZjsQCo1u
       MYSQL_PORT: 3306
       MYSQL_CONNECTIONLIMIT: 10
       SERVER_HOSTNAME: https://beeng.cybersoft.edu.vn
@@ -63,6 +59,3 @@ services:
       LOG_DIR: "/logs"
       LOG_LEVEL: "info"
       NODE_ENV: "production"
-      
-    volumes:
-      - ./logs:/logs

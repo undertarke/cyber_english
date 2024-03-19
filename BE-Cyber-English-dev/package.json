@@ -29,6 +29,7 @@
     "jsonwebtoken": "^8.5.1",
     "log4js": "^6.3.0",
     "mysql": "^2.18.1",
+    "mysql2": "^3.9.2",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
     "ts-node": "^10.8.1",

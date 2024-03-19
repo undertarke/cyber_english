@@ -76,6 +76,13 @@ class AppRouter {
 
       });
     })
+
+    this.appRouter.get("/get/:id", (req, res) => {
+
+      this.userSev.getUserById(+req.params.id).then(resu => {
+        res.send(resu)
+      })
+    })
   }
 
   log = (data: any, message: string = "") => {

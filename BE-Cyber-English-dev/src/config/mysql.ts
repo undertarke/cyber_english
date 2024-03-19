@@ -1,12 +1,12 @@
 import 'reflect-metadata'
-import mysql from 'mysql';
+import mysql from 'mysql2';
 import config from './config';
 import { singleton } from 'tsyringe';
 
 @singleton()
 class DBService {
-    private connection: mysql.Pool;
-    private params: mysql.PoolConfig = {
+    private connection;
+    private params = {
         host: config.mysql.host,
         database: config.mysql.database,
         user: config.mysql.user,
@@ -19,7 +19,7 @@ class DBService {
         this.connection = this.initConnection();
     }
 
-    private initConnection = (): mysql.Pool => {
+    private initConnection = () => {
         const connection = mysql.createPool(this.params);
         connection.on('connection', (err) => {
             // if (err) {
